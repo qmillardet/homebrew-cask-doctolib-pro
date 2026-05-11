@@ -1,4 +1,4 @@
-cask "doctolib" do
+cask "doctolib-pro" do
   arch arm: "-arm64", intel: ""
 
   version "2.107.0"
