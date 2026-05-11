@@ -10,7 +10,10 @@ cask "doctolib-pro" do
   homepage "https://info.doctolib.fr/bureau/"
 
   livecheck do
-    skip "The vendor's update feed is stale and does not reflect current releases."
+    url :url
+    strategy :extract_plist do |items|
+      items["com.doctolib.pro.desktop"]&.short_version
+    end
   end
 
   auto_updates true
